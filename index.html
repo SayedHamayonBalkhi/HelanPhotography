@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helan Event Photography | Real Moments. Lasting Stories.</title>
+  <meta name="description" content="Helan Event Photography: event and lifestyle photography for weddings, family milestones, and everyday moments worth remembering.">
+  <meta name="theme-color" content="#F7F6F2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Helan Event Photography">
+  <meta property="og:title" content="Helan Event Photography">
+  <meta property="og:description" content="Every moment deserves to be remembered.">
+  <!-- After you publish, change this to the full web address, e.g. https://your-site.com/favicon/og-image.jpg -->
+  <meta property="og:image" content="favicon/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="preload" href="fonts/cormorant-garamond-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow" data-bind="hero.eyebrow"></p>
+          <h1 class="hero__title" id="hero-title"></h1>
+          <p class="hero__intro" data-bind="hero.intro"></p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" id="hero-cta-1" href="work.html"></a>
+            <a class="btn btn--ghost" id="hero-cta-2" href="#contact"></a>
+          </div>
+        </div>
+        <figure class="hero__media" id="hero-media" hidden>
+          <img id="hero-img" alt="" decoding="async" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Selected work -->
+    <section class="section" id="featured" aria-labelledby="featured-title" hidden>
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow" data-bind="featuredSection.eyebrow"></p>
+            <h2 id="featured-title" data-bind="featuredSection.heading"></h2>
+          </div>
+          <a class="text-link" id="featured-link" href="work.html"></a>
+        </header>
+        <div class="featured" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section section--alt" id="categories" aria-labelledby="categories-title" hidden>
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow" data-bind="categoriesSection.eyebrow"></p>
+            <h2 id="categories-title" data-bind="categoriesSection.heading"></h2>
+          </div>
+        </header>
+        <ul class="cats" id="cats-grid"></ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <figure class="about__media" id="about-media" hidden>
+          <img id="about-img" alt="" loading="lazy" decoding="async">
+        </figure>
+        <div class="about__text">
+          <p class="eyebrow" data-bind="about.eyebrow"></p>
+          <h2 id="about-title" data-bind="about.heading"></h2>
+          <p class="lead" data-bind="about.intro"></p>
+          <h3 data-bind="about.approachHeading"></h3>
+          <p data-bind="about.approach"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section section--tight" id="why" aria-labelledby="why-title" hidden>
+      <div class="container">
+        <h2 class="h2--small" id="why-title" data-bind="whyChoose.heading"></h2>
+        <ul class="why" id="why-list"></ul>
+      </div>
+    </section>
+
+    <!-- Testimonials preview (only shown when approved, featured testimonials exist) -->
+    <section class="section section--alt" id="testimonials-preview" aria-labelledby="tp-title" hidden>
+      <div class="container">
+        <header class="section-head">
+          <h2 id="tp-title" data-bind="testimonials.homeHeading"></h2>
+          <a class="text-link" href="testimonials.html" data-bind="testimonials.homeLinkLabel"></a>
+        </header>
+        <div class="quotes quotes--preview" id="tp-list"></div>
+      </div>
+    </section>
+
+    <!-- Closing CTA + contact form -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__intro">
+          <h2 id="contact-title" data-bind="contact.heading"></h2>
+          <p class="lead" data-bind="contact.copy"></p>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="field__error" id="e-name" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-email">Email address</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+            <p class="field__error" id="e-email" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-interest" id="interest-label"></label>
+            <select id="f-interest" name="interest"></select>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="5" required aria-describedby="e-message"></textarea>
+            <p class="field__error" id="e-message" hidden></p>
+          </div>
+          <!-- Spam trap: real visitors never see or fill this in -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <button class="btn btn--primary" type="submit" id="form-submit"></button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <aside class="quick" aria-labelledby="quick-title">
+          <h3 class="quick__title" id="quick-title" data-bind="contact.quickHeading"></h3>
+          <ul class="quick__list" id="quick-list"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <noscript><p class="container noscript">Please turn on JavaScript to browse the portfolio and use the contact form.</p></noscript>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-btn lb-close" type="button" aria-label="Close viewer">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img class="lb-img" alt="">
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+    <p class="lb-count" aria-live="polite"></p>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

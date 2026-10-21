@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work | Helan Event Photography</title>
+  <meta name="description" content="Browse the Helan Event Photography portfolio: weddings, family milestones, and nature, with each category in its own gallery.">
+  <meta name="theme-color" content="#F7F6F2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Helan Event Photography">
+  <meta property="og:title" content="Work | Helan Event Photography">
+  <meta property="og:description" content="Every moment deserves to be remembered.">
+  <!-- After you publish, change this to the full web address, e.g. https://your-site.com/favicon/og-image.jpg -->
+  <meta property="og:image" content="favicon/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="preload" href="fonts/cormorant-garamond-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="work">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow" data-bind="workPage.eyebrow"></p>
+        <h1 class="page-title" data-bind="workPage.heading"></h1>
+        <p class="lead" data-bind="workPage.intro"></p>
+        <nav class="filters" id="filters" aria-label="Photo categories"></nav>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="gallery-head">
+          <h2 id="gallery-title"></h2>
+          <p id="gallery-desc"></p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <p class="empty" id="gallery-empty" hidden>There are no photographs in this category yet.</p>
+        <p class="sr-only" id="gallery-live" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <noscript><p class="container noscript">Please turn on JavaScript to browse the portfolio.</p></noscript>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-btn lb-close" type="button" aria-label="Close viewer">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img class="lb-img" alt="">
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+    <p class="lb-count" aria-live="polite"></p>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
