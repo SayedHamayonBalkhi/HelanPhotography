@@ -175,7 +175,7 @@ window.HELAN_CONTENT = {
        phone:    the number people should call, e.g. "+1 555 123 4567" (opens as a tel: link).
        email:    (above) becomes the "Email Helan" mailto: link. */
     whatsapp: "",
-    phone: "+14699118086",
+    phone: "+14699228086",
     whatsappMessage: "Hi Helan, I would like to enquire about a photography session.",
     ctaLabels: {
       book: "Book a Session",
