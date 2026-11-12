@@ -776,7 +776,7 @@
       if (!validate()) return;
       if (form.elements._honey && form.elements._honey.value) { return; } // a bot filled the hidden field: drop it quietly
 
-      var recipient = ((C.form && C.form.recipient) || "").trim();
+      var recipient = String((C.form && C.form.recipient) || c.email || "").trim();
       if (!recipient || /[\s\/]/.test(recipient)) {
         console.warn("[content.js] form.recipient is empty or invalid, so the contact form cannot send yet. See the README, 'Contact form'.");
         setStatus(c.notConfiguredMessage, "error");
