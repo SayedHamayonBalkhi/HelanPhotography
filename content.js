@@ -200,7 +200,7 @@ window.HELAN_CONTENT = {
      The form will honestly say it is not connected until this is filled in. */
   form: {
     provider: "formsubmit",
-    recipient: "",
+    recipient: "Helan.Balkhi@gmail.com",
     subject: "New enquiry from the Helan Event Photography website"
   },
 
